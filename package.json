@@ -1,0 +1,27 @@
+{
+  "name": "star-wars-app",
+  "version": "1.0.0",
+  "description": "Small application for Star Wars fans using NodeJS, Angular and Express.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Graves-/StarWarsApp.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "angular",
+    "starwars",
+    "star",
+    "wars"
+  ],
+  "author": "Guillermo Ortiz Rebolledo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Graves-/StarWarsApp/issues"
+  },
+  "homepage": "https://github.com/Graves-/StarWarsApp#readme"
+}
