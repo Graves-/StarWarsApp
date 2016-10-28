@@ -1,11 +1,45 @@
+
+
 <div class="container-fluid" style="padding-top: 50px;" ng-app="star-wars">
 	<h1 id="jedi-title">Star Wars</h1>
+	<div class="container jedi-module" ng-controller="characters">
+		<div class="row">
+			<label for="character-search">Character Search</label>
+			<input type="text" name="character-search" id="character-search" class="form-control" value="" pattern="" title="" placeholder="Luke Skywalker" ng-model="inputCharacter">
+			<button type="button" class="btn btn-jedi pull-right" id="btn-search-character" ng-click="searchPeople()">Search</button>
+		</div>
+
+		<div class="row" style="padding-top: 20px;">
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<button type="button" class="btn btn-nav pull-left"><img src="/img/previous.png" class="img-responsive" alt="Image" ></button>
+			</div>
+			b3
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<button type="button" class="btn btn-nav pull-right"><img src="/img/next.png" class="img-responsive" alt="Image"></button>
+			</div>
+			
+			
+		</div>
+
+		<div class="row" style="padding-top: 20px;">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="character in characters | filter: inputCharacter">
+					<h3>{[{character.name}]}</h3>
+					<div class="collapse" id="{[{'collapse'+$index}]}">
+						<p><strong>Height:&nbsp;&nbsp;</strong>{[{character.height}]} m</p>
+						<p><strong>Mass:&nbsp;&nbsp;</strong>{[{character.mass}]} kg</p>
+					</div>
+					<button type="button" class="btn btn-primary pull-right" data-toggle="collapse" data-target="#{[{'collapse'+$index}]}" ng-click="getMoreInfo($index+1)">Info</button><br><br>
+
+				</li>
+			</ul>
+		</div>
+	</div>
 </div>
 
 
-<script type="text/javascript">
 
-	//ANGULAR
+<script type="text/javascript">
 
 	//SETTINGS
 	var app = angular.module('star-wars', []);
@@ -16,7 +50,19 @@
 
 	//CHARACTERS CONTROLLER
 	app.controller('characters',function($scope,$http) {
+		$http.get("http://swapi.co/api/people/?format=json").then(function(response) {
+	        console.log(response.data);
+	        $scope.characters = response.data.results;
+	    });
+
+		$scope.searchPeople = function(){
+			alert('lmao');
+		};
+
+		$scope.getMoreInfo = function(index){
+			//alert(index);
+		}
+
 
 	});
-
 </script>

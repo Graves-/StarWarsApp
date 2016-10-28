@@ -12,15 +12,51 @@ body{
     background-color: #101721;
 }
 
+.jedi-module{
+    color: #CCCCCC;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+
 @font-face {
     font-family: starjedi;
     src: url('/fonts/Starjedi.ttf');
 }
 
 #jedi-title{
-     text-align: center;
+    text-align: center;
     font-family: starjedi;
     font-size: 90pt;
     color: #CDA835;
     text-shadow: 0 0 10px #CDA835, 0 0 15px #CDA835;
+    padding-bottom: 20px;
+}
+
+input[type=text], input[type=text]:focus {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #CDA835;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #101721;
+    color: #CDA835;
+}
+
+.btn-jedi{
+    background-color: #101721;
+    border: 2px solid #CDA835;
+}
+
+.list-group-item{
+    color: #CDA835;
+    background-color: #101721; 
+    border: 2px solid #CDA835;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-nav{
+    background-color: transparent;
 }
