@@ -1,3 +1,22 @@
-<div class="container-fluid" style="padding-top: 50px;">
-	<h1>Ayy lmao</h1>
+<div class="container-fluid" style="padding-top: 50px;" ng-app="star-wars">
+	<h1 id="jedi-title">Star Wars</h1>
 </div>
+
+
+<script type="text/javascript">
+
+	//ANGULAR
+
+	//SETTINGS
+	var app = angular.module('star-wars', []);
+	app.config(function($interpolateProvider) {
+	  $interpolateProvider.startSymbol('{[{');
+	  $interpolateProvider.endSymbol('}]}');
+	});
+
+	//CHARACTERS CONTROLLER
+	app.controller('characters',function($scope,$http) {
+
+	});
+
+</script>

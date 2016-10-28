@@ -1,0 +1,26 @@
+.wat{
+	height: 450px;
+	width: 100%;
+	background: url('skyline.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body{
+    background-color: #101721;
+}
+
+@font-face {
+    font-family: starjedi;
+    src: url('/fonts/Starjedi.ttf');
+}
+
+#jedi-title{
+     text-align: center;
+    font-family: starjedi;
+    font-size: 90pt;
+    color: #CDA835;
+    text-shadow: 0 0 10px #CDA835, 0 0 15px #CDA835;
+}
